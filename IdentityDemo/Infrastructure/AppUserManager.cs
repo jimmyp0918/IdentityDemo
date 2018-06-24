@@ -33,6 +33,12 @@ namespace IdentityDemo.Infrastructure
                 RequireUppercase = true
             };
 
+            manager.UserValidator = new CustomUserValidator(manager)
+            {
+                AllowOnlyAlphanumericUserNames = true,
+                RequireUniqueEmail = true
+            };
+
             return manager;
         }
     }

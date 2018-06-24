@@ -10,6 +10,7 @@ namespace IdentityDemo.Controllers
     {
         #region View
 
+        [Authorize]
         public ActionResult Index()
         {
             Dictionary<string, object> data = new Dictionary<string, object>();
